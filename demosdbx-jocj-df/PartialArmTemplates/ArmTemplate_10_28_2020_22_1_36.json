@@ -6,10 +6,6 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "demosdbx-jocj-df"
-		},
-		"AzureKeyVault1_properties_typeProperties_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://demosdbx-jocj-vault.vault.azure.net/"
 		}
 	},
 	"variables": {
@@ -80,22 +76,6 @@
 					"newClusterNodeType": "Standard_DS3_v2",
 					"newClusterNumOfWorker": "1",
 					"newClusterVersion": "7.0.x-scala2.12"
-				}
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/linkedServices/AzureKeyVault1')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/AzureKeyVault1')]",
-			"type": "Microsoft.DataFactory/factories/linkedServices",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"description": "Added Description",
-				"annotations": [],
-				"type": "AzureKeyVault",
-				"typeProperties": {
-					"baseUrl": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
 				}
 			},
 			"dependsOn": []
