@@ -5,6 +5,7 @@
 		"type": "AzureKeyVault",
 		"typeProperties": {
 			"baseUrl": "https://demosdbx-jocj-vault.vault.azure.net/"
-		}
+		},
+		"description": "Added Description"
 	}
 }
