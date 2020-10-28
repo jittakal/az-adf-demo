@@ -6,10 +6,6 @@
 			"type": "string",
 			"metadata": "Data Factory name",
 			"defaultValue": "demosdbx-jocj-df"
-		},
-		"AzureKeyVault1_properties_typeProperties_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://demosdbx-jocj-vault.vault.azure.net/"
 		}
 	},
 	"variables": {
@@ -25,7 +21,7 @@
 				"annotations": [],
 				"type": "AzureKeyVault",
 				"typeProperties": {
-					"baseUrl": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
+					"baseUrl": "https://demosdbx-jocj-vault.vault.azure.net/"
 				}
 			},
 			"dependsOn": []
